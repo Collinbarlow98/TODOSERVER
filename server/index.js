@@ -23,16 +23,12 @@ app.post('/todos',(req,res) => {
     title: title,
     priority: priority,
     dateCreated: dateCreated,
-    dateCompleted: null,
-    isComplete: false
+    dateCompleted: null
   }
   todos.push(item)
   res.json(item)
 })
 
-app.get('/todos',(req,res) => {
-  res.send(todos)
-})
 //start the server
 
 app.listen(3000, () => {
